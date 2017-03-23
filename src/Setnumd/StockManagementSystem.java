@@ -195,7 +195,7 @@ btnProductInfo.addActionListener(this);
 	try {
 		
 		
-	conn = DriverManager.getConnection(url,"root","");
+	conn = DriverManager.getConnection(url,"root","setonji04");
 } catch (SQLException e1) {
 	// TODO Auto-generated catch block
 	 JOptionPane.showMessageDialog(null, "Failed Connection,ON your Local Server","Error",JOptionPane.ERROR_MESSAGE);
@@ -428,6 +428,10 @@ void productdetails(){
 		
 		else if(obj==btnExit){
 			dispose();
+			StockManagementSystem sam = new StockManagementSystem();
+			sam.setSize(500,380);
+			sam.setVisible(true);
+			sam.setLocationRelativeTo(null);
 		}
 		else if(obj==btnRefresh){
 			dispose();
@@ -450,7 +454,7 @@ void productdetails(){
 			txtProductCat.setEditable(true);
 			pane.add(btnSave).setBounds(10,300,130,20);
 			pane.add(btnExit).setBounds(330,300,130,20);
-			pane.add(btnClear).setBounds(170,300,130,20);
+			//pane.add(btnClear).setBounds(170,300,130,20);
 			
 		}
 	else if(obj==btnProductdetails){
@@ -481,7 +485,7 @@ void productdetails(){
 			btnProductInfo.setEnabled(true);
 			pane.add(btnProductInfo).setBounds(20,300,200,20);
 			pane.add(btnExit).setBounds(370,300,120,20);
-			pane.add(btnClear).setBounds(230,300,130,20);
+			//pane.add(btnClear).setBounds(230,300,130,20);
 			txtPCode.setEditable(true);
 			
 			
